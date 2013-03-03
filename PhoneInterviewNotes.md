@@ -3,7 +3,8 @@
  - Sorting 
  - Searching/Binary Search
  - Divide and Conquer 
- - Dynamic Programming, Memoization Greediness
+ - Dynamic Programming, Memoization
+ - Greediness
  - Recursion
 
 **Data Structures**
@@ -15,8 +16,7 @@
  - Trees / Binary Tree / Trie / Heaps
  - Graphs
 
-
-Sample Style for a Java Class
+**Sample Style for a Java Class**
 
         package test;
         import test.*;
