@@ -114,7 +114,23 @@ Item 40: Use multiple inheritance judiciously.
 
 Item 41: Understand implicit interfaces and compile-time polymorphism.
 
+
+- Both classes and templates support interfaces and polymorphism.
+
+- For classes, interfaces are explicit and centered on function signatures. Polymorphism occurs at runtime through virtual functions.
+
+- For template parameters, interfaces are implicit and based on valid expressions. Polymorphism occurs during compilation through template instantiation and function overloading resolution.
+
+- compile-time polymorphism: instantiating function templates with different template parameters leads to different functions being called.
+
+
+
 Item 42: Understand the two meanings of typename.
+
+````
+template<class T> class Widget;
+template<typename T> class Widget;
+````
 
 Item 43: Know how to access names in templatized base classes.
 
@@ -127,6 +143,11 @@ Item 46: Define non-member functions inside templates when type conversions are 
 Item 47: Use traits classes for information about types.
 
 Item 48: Be aware of template metaprogramming.
+
+- Template programming can shift work from runtime to compile time, thus enabling error detection and higher runtime performance.
+- TMP can be used to generate custom code based on combinations of policy choices, and it can also be used to avoid generating code inappropriate for particular types.
+
+
 
 ####Chapter 8: Customizing new and delete####
 Item 49: Understand the behavior of the new-handler.
