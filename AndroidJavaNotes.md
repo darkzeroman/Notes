@@ -5,7 +5,6 @@ Preferences should not hold sensitive information.
 They need default values because preferences can be deleted.  
 Preference Event Listener  
 
-
 ##### Java Notes
 
 FileReader and FileWriter for text files  
@@ -19,10 +18,4 @@ instance field initializers gets called before the constructor
 local inner classes  
 anonymous inner class  
 Enumeration classes require private constructors, ex: override toString()
-
-
-
-Python
-
-if 1 < 2 < 3
 
