@@ -50,7 +50,7 @@ Item 11. Handle assignment to self in operator=.
 
 Item 12. Copy all parts of an object.
 
-####Chapter 3. Resourece Management####
+####Chapter 3. Resource Management####
 Item 13: Use objects to manage resources.
 
 Item 14: Think carefully about copying behavior in resource-managing classes.
