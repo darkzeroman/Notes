@@ -31,8 +31,7 @@ TCP/IP breaks up the request into multiple parts if needed.
 The server gets a request which includes a path name. And it might return a static page depending if it's cached.
 Load balancing (can use source IP, url for hashing)
 
-Restful/HTTP Methods Commands
-
+#####Restful/HTTP Methods Commands
 Get, Post, Put, Delete
 
 
