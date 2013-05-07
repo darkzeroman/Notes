@@ -1,0 +1,1 @@
+[Currently Notes Are Here](https://docs.google.com/document/d/13Hsrq8xz1c-sxrpC6iepK9uMjvOTrgmLOSgEee1kxu0/pub)
