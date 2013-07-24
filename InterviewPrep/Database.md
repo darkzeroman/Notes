@@ -64,3 +64,14 @@ Multithreaded Databases
 * pessimistic locking: lock everything that is being accessed
 * optimistic locking: dirty reads that roll back transactions. 
 
+Comparing DB Technologies
+
+* MongoDB
+	* C++, SQL properties, Sharding, 
+	* Best used: 
+* Riak
+	* Erlang, C, some JS, transitioning to LevelDB
+	* Fault tolerance, HTTP/REST or custom library
+	* Map/Reduce in JS/Erlang
+	* Fill-text search, indexing, querying with Riak Search
+	* Masterless multi-site replication

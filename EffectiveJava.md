@@ -99,6 +99,11 @@ When overriding is recommended:
     * Document restrictions and enforce them with checks that throw runtime exceptions.
     * Nonpublic methods should generally check their parameters using assertions rather than normal checks.
 23. Don't use raw types in new code
+	* Use generics when using Collections for safety and expressiveness
+	* List vs List<Object>
+		* Can pass a List<String> as a List but not List<Object>
+		
+
 24. Eliminate unchecked warnings
 25. Prefer lists to arrays
 26. Favor generic types
