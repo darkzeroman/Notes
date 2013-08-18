@@ -141,3 +141,18 @@ Examples: Adapter pattern used in ActiveRecord to wrap SQL from different databa
 ### Proxy Pattern
 Good for controlling access to object, providing location-independent way of getting at object, or delaying its creation.
 
+Protection proxy: each operation requires approval before making change.
+Remote proxies: 
+Virtual proxy: doesn't connect until necessary
+
+To not have to re-write all methods of Real Service, in Ruby, use: 
+```
+def method_missing(name, *args)    puts("Warning, warning, unknown method called: #{name}")    puts("Arguments: #{args.join(' ')}")end
+```
+Use/Abuse
+Methods inherited from object will be implemented for proxies.
+
+Examples: Ruby SOAP client, Distributed Ruby package (drb)
+
+Wrapping Up
+Similar to Adapter except it does not change the interface, only tries to control access to it.
