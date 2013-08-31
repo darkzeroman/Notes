@@ -156,3 +156,79 @@ Examples: Ruby SOAP client, Distributed Ruby package (drb)
 
 Wrapping Up
 Similar to Adapter except it does not change the interface, only tries to control access to it.
+
+### Decorator Pattern
+Enables to easily add an enhancement to an existing object. 
+
+Incorporates lots of delegation. Can use `method_missing` technique or `forwardable` module. 
+
+`def_delegators(instance_attribute, methods)`
+This gives more control to programmer.
+
+``` 
+class WriterDectorator
+	extend Forwardable
+	def_delegators :@real_writer, :write-line, :rewind, :pos, :close
+	def initialize(real_writer)
+		@real_writer = real_writer
+	end
+end
+```
+include (instance methods) vs extend (add-class level methods)
+
+An alternative to Forwardable is to use dynamic/runtime methods.
+
+```
+w = SimpleWriter.new('out')class << w  alias old_write_line write_line  def write_line(line)    old_write_line("#{Time.new}: #{line}")  end
+end```
+`alias` changes the name of a method, but doesn't work well for more than one change.
+Can use modules for decorator pattern. Need to put every decorator classes into modules.
+`extend` inserts a module into object's inheritance tree before its regular class.
+
+```
+module NumberingWriter
+	attr_reader :line_number
+	def write_line(line)
+		...
+	end
+end
+
+class Writer
+	…
+end	
+w.extend(NumberingWriter)```
+For run-time techniques, it is hard to undo. 
+Abuses
+
+Hard to use, performance overhead, method_aliasing makes debugging harder
+
+Examples
+
+ActiveSupport (support utilities used by rails). `alias_method_chain` allows us to decorate methods with any number of features.
+
+```
+def write_line_with_numbering(line)  @number = 1 unless @number  write_line_without_numbering("#{@number}: #{line}")  @number += 1endalias_method_chain :write_line, :numbering
+```
+Wrapping Up
+Each decorator supports the same core interface, but has an unique twist. 
+
+### Singleton Pattern
+One object that has global access
+
+Class variables are attached to whole inheritance hierarchy. Class shares a common set of class variables with its superclass and all of its subclasses. 
+
+Need to make constructor(new) method private by:
+` private_class_method :new`
+Or use Singleton module
+Lazy vs eager instantiation
+`$var` makes it global, not really a good option
+Make singleton a class. Good: no second instance, bad: lazy initiation, no control over timing of initialization
+Make singleton a module. Good: no instantiation
+
+Ruby's clone method is a way around all this.
+
+Using/Abusing: Hard for unit tests, hard to use
+
+Examples: Rails, Rake
+
+
