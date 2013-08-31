@@ -227,8 +227,62 @@ Make singleton a module. Good: no instantiation
 
 Ruby's clone method is a way around all this.
 
+Testing: Make tests use a non-singleton version of the class.
+
 Using/Abusing: Hard for unit tests, hard to use
 
 Examples: Rails, Rake
+
+### Factory Pattern and Abstract Factory Pattern
+
+Very similar to Template Method pattern applied to problem of creating new objects.
+
+* Creator: Pond
+* Concrete Creators: DuckPong, FrogPond
+* Products: Duck, Frog
+
+TO DO MORE
+
+### Builder Pattern
+
+
+Builder pattern is a middle man which holds the configuration which is passed on to another object which does the building.
+
+Builders make creating complex objects easier, but also hide the implementation details.
+
+Builders can ensure sane objects, can hold sane logic.
+
+Reusable builders
+
+TO DO MORE
+
+### Interpreter Pattern
+
+Good for when another language is good for a task, such as SQL.
+
+Abstract Syntax Tree (AST): how to interpret expressions
+
+Use an interpreter to find files example. Can use terminal/nonterminal nodes to create a tree.
+
+Can use YAML/XML for representing simple data. Racc is good for more complex languages. 
+
+Uses/Abuses
+SQL, Intepreter has a computation overhead.
+
+Examples: Ruby, regular expressions, Runt (library provides simple language for expressing things lie date/time ranges/schedules)
+ 
+Conclusion
+Good for solving well-bounded problems such as query or configuration languages. Is a good option for combining chunks of existing functionality together.
+Core of Interpreter Pattern is AST. Which can be slow but powerful. Similar to DSL
+
+## Ruby Patterns
+
+### Domain-Specific Languages
+
+Goal is to make a language understandable by domain experts. While Interpreter assumed an AST already exists, DSL is how the AST might be built.
+
+External DSL: external parser, interpreter
+Internal DSL: the domain is coded in the language
+
 
 
