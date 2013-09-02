@@ -1,3 +1,5 @@
+## Patterns in Ruby
+
 ### Template Pattern
 build abstract base class with skeletal method. 
 
