@@ -44,18 +44,33 @@ Options to dealing with missing values in data:
 * Use mean value from similar items
 * Use another ML algorithm to predict the value
 
+Gradient Ascent Pseudo Code:
+
+```
+Start with the weights all set to 1 
+For each piece of data in the dataset:	Calculate the gradient of one piece of data 	Update the weights vector by alpha*gradient 	Return the weights vector
+```
+
 ### Chapter 6: Support Vector Machines (SVM)
 * Pros: Low generalization error, computationally inexpensive, easy to interpret results
 * Cons: Sensitive to tuning parameters and kernel choice; natively only handles binary classification
 * Works with: Numeric, Nominal
 
 Concerns with SVMs:
+
 * Need to find the maximum margin by solving a quadratic optimization problem
 * Optimization can use SMO, or Platt's SMO
 * Kernels: transform data onto another space. Examples: RBF (radial bias function)
 * Kernels are sensitive of C
 
 SVMs generate a binary decision (but can be changed to support more). Good generatialization error. 
+
+SMO Pseudo Code:
+
+```
+Create an alphas vector filled with 0sWhile the number of iterations is less than MaxIterations:	For every data vector in the dataset: 
+		If the data vector can be optimized:			Select another data vector at random 			Optimize the two vectors together			If the vectors can’t be optimized ➞ break	If no vectors were optimized ➞ increment the iteration count
+```
 
 ### Chapter 7: Improving Classification with the AdaBoost
 
@@ -99,7 +114,18 @@ Ridge regression: first of two shrinkage methods
 
 pg 168
 
-### Chapter 9: Tree-based 
+### Chapter 9: Tree-based
+
+CART: Classification And Regression Trees. Pruning. Model Trees.
+
+ID3: splits all possible values of feature and can't be used again (can do a binary split), can't handle continuous features
+
+CART: makes binary splits and handles continuous variables. Can do regression with modification.
+
+* Pros: Fits complex, nonlinear data* Cons: Difficult to interpret results* Works with: Numeric values, nominal value
+Pseudo Code for Create Tree```
+Find the best feature to split on:	If we can’t split the data, this node becomes a leaf node Make a binary split of the data	Call createTree() on the right split of the data	Call createTree() on the left split of the data
+```
 
 ## Part 3: Unsupervised Learning
 
@@ -194,9 +220,10 @@ Remove the meanCompute the covariance matrixFind the eigenvalues and eigenvect
 Matrix factorization: takes a larger complicated matrix into a few smaller matrices. Assuming most of the matrix is noise.SVD Process: Data = U E V^T
 E: only diagonal elements are singular values, correspond to singular values of Data.
 Collaborative Filtering-Based Recommendation Engines
-Distance Measurements: Euclidean or Pearson Correlation (shows how similar two vectors are, ranges from -1 to 1), cosine similarity
+Distance Measurements:
+* Euclidean* Pearson Correlation (shows how similar two vectors are, ranges from -1 to 1)* Cosine Similarity
 Item-based or user-based similarity depends on the situation.
-* Evaluating recommendation engines: RMSE (root mean squared error)
+Evaluating recommendation engines: RMSE (root mean squared error)
 Challenges: search problem (content-based recommendation) is good for cold-start.
 
 
