@@ -102,10 +102,28 @@ Concerns with SVMs:
 
 * Need to find the maximum margin by solving a quadratic optimization problem
 * Optimization can use SMO, or Platt's SMO
-* Kernels: transform data onto another space. Examples: RBF (radial bias function)
-* Kernels are sensitive of C
+* Kernels: transform data onto another space. Examples: RBF (radial bias function). Used because of inner products
+* Kernels are sensitive of parameters
 
 SVMs generate a binary decision (but can be changed to support more). Good generatialization error. 
+
+Terms:
+
+* Linearly Separable
+* Separating Hyperplane: line used to separate the dataset.
+* Hyperplane:
+* Support vectors: points closest to separating hyperplane, which are used for classification
+* Margin: 
+* Slack Variables: 
+
+SMO:
+
+* takes large optimization problem and breaks it into many small problems
+* problems can be solved sequentially, but faster
+* chooses two alphas to optimize on each cycle. once a suitable pair of alphas is found, one is increased, other is decreated.
+* Two criterias for alphas:
+	* both alphas have to be outside margin boundary
+	* alphas aren't clamped or bounded
 
 SMO Pseudo Code:
 
@@ -113,6 +131,11 @@ SMO Pseudo Code:
 Create an alphas vector filled with 0sWhile the number of iterations is less than MaxIterations:	For every data vector in the dataset: 
 		If the data vector can be optimized:			Select another data vector at random 			Optimize the two vectors together			If the vectors can’t be optimized ➞ break	If no vectors were optimized ➞ increment the iteration count
 ```
+Examples: handwriting classification (so don't need to package data with model)
+
+SVMs are a type of classifier, generate a binary decision. Considered to be the best stock algorithm in unsupervised learning.
+
+SVMs try to maxmimize margin by solving quadratic optimization problem. 
 
 ### Chapter 7: Improving Classification with the AdaBoost
 
