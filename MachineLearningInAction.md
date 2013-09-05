@@ -1,6 +1,6 @@
 # Machine Learning in Action
 
-## Part 1
+## Part 1:  Classification
 
 ### Chapter 1: Machine Learning Basics
 
@@ -11,8 +11,19 @@ Unsupervised Learning Tasks: kMeans, DBSCAN, EM, Parzen Window
 ### Chapter 2: kNN
 
 * Pros: high accuracy, insensitive to outliers, no assumptions about data
-* Cons: Computationally expensive, lots of memory
+* Cons: Computationally expensive, lots of memory, Needs to be normalized
 * Works with: Numeric, Nominal
+
+```
+For every point in our dataset:	calculate the distance between inX and the current point	sort the distances in increasing order	take k items with lowest distances to inX	find the majority class among these items	return the majority class as our prediction for the class of inX
+```
+Examples: Dating preferences, handwriting recognition
+
+Summary
+* kNN is example of instance-based learning (need instances of data to perform classification). 
+* Large storage
+* Need to scan all data to find distances, so slow. 
+* Can't understand representation.
 
 ### Chapter 3: Decision Trees
 
@@ -20,14 +31,42 @@ Unsupervised Learning Tasks: kMeans, DBSCAN, EM, Parzen Window
 * Cons: Prone to overfitting
 * Works with: Numeric, Nominal
 
-Information Gain, entropy, Gini impurity
+Decision trees are often used in expert systems, comparable to human output.
+
+
+Information Gain, Entropy, Gini impurity
 Info(xi) = equation here
-Tree Algorithms: CART, C4.5
+
+Tree Algorithms: 
+
+* CART
+* C4.5
+* ID3 - Can't handle numeric values, not good if many splits.
+
+Create Branch:
+
+```
+Check if every item in the dataset is in the same class: 
+	If so return the class label	Else		find the best feature to split the data split the dataset		create a branch node			for each split				call createBranch and add the result to the branch node	return branch node
+```
+
+Example: predict contact lens type, predict spam, is fish?
 
 ### Chapter 4: Naive Bayes
 * Pros: works well with small amount of data, handles multiple classes
 * Cons: sensitive to how the input data is prepared
 * Works with: Nominal 
+
+Assumptions: each feature has same probability, each feature is independent
+
+
+```
+Count the number of documents in each class for every training document:	for each class:		if a token appears in the document ➞ increment the count for that token increment the count for tokens	for each class: for each token:		divide the token count by the total token count to get conditional probabilities 
+	return conditional probabilities for each class```
+Issues
+* Need to set 0 probabilities to a non-zero value* Underflow, so instead take the natural log
+
+Example: documentation classification, spam, guess location by text
 
 ### Chapter 5: Logistic Regression
 * Pros: Computationally inexpensive, easy to implement, knowledge representation is interpretable
@@ -50,6 +89,9 @@ Gradient Ascent Pseudo Code:
 Start with the weights all set to 1 
 For each piece of data in the dataset:	Calculate the gradient of one piece of data 	Update the weights vector by alpha*gradient 	Return the weights vector
 ```
+Examples: horse fatalities from colic
+
+Logistic regression is finding best-fit parameters to a nonlinear function called the sigmoid.
 
 ### Chapter 6: Support Vector Machines (SVM)
 * Pros: Low generalization error, computationally inexpensive, easy to interpret results
@@ -123,9 +165,8 @@ ID3: splits all possible values of feature and can't be used again (can do a bin
 CART: makes binary splits and handles continuous variables. Can do regression with modification.
 
 * Pros: Fits complex, nonlinear data* Cons: Difficult to interpret results* Works with: Numeric values, nominal value
-Pseudo Code for Create Tree```
-Find the best feature to split on:	If we can’t split the data, this node becomes a leaf node Make a binary split of the data	Call createTree() on the right split of the data	Call createTree() on the left split of the data
-```
+Pseudo Code for Create Tree```
+Find the best feature to split on:	If we can’t split the data, this node becomes a leaf node Make a binary split of the data	Call createTree() on the right split of the data	Call createTree() on the left split of the data```
 
 ## Part 3: Unsupervised Learning
 
@@ -153,15 +194,16 @@ While the number of clusters is less than k	for every cluster		measure total e
 
 ### Apriori Algorithm
 
-* Pros: Easy to code up* Cons: May be slow on large datasets* Works with: Numeric values, nominal values
+* Pros: Easy to code up* Cons: Will be slow on large datasets* Works with: Numeric values, nominal values
 
 Association analysis (association rule learning): looking for hidden relationships in large datasets.
+
 * Frequent item sets: collections of items that frequently occur together
 * Association rules: suggest that a strong relationship exists between two items
-
-	
 * Support: percentage of the dataset that contains the itemset
 * Confidence: association rules, support(two_items)/support(one_item)
+
+Need to check all possible itemsets from powerset, so any sort of reducing the possibilities would be great. Otherwise it's 2^n.
 
 Apriori Principle: if an itemset is frequent, then all of its subsets are frequent (or inverse)
 
@@ -173,26 +215,29 @@ For each candidate itemset, can:
 	Check to see if can is a subset of tran
 	If so increment the count of can
 For each candidate itemset:
-If the support meets the minimum, keep this item
+	If the support meets the minimum, keep this item
 Return list of frequent itemsets
-	
 ```
+Apriori Algorithm:
 
 ```
 While the number of items in the set is greater than 0: 
 	Create a list of candidate itemsets of length k	Scan the dataset to see if each itemset is frequent	Keep frequent itemsets to create itemsets of length k+1```
+
+If a rule doesn't meet the minimum confidence requirement, then subsets of that rule also won't meet the minimum.
+
 
 
 ### FP-Growth (frequent pattern)
 
 * Pros: Usually faster than Apriori.* Cons: Difficult to implement; certain datasets degrade the performance.* Works with: Nominal values.
 
+Uses idea of Apriori tree, but faster. 
+
+
 Two steps:
 * Build FP-tree
 * Mine frequent itemsets from the FP-tree
-
-
-
 
 ## Part 4: Additional Tools
 
