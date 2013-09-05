@@ -137,27 +137,27 @@ SVMs are a type of classifier, generate a binary decision. Considered to be the 
 
 SVMs try to maxmimize margin by solving quadratic optimization problem. 
 
-### Chapter 7: Improving Classification with the AdaBoost
+### Chapter 7: Improving Classification with the AdaBoost (Adaptive Boost)
 
 * Pros: Low generalization error, easy to code, works with most classifiers, no param- eters to adjust* Cons: Sensitive to outliers* Works with: Numeric values, nominal values
 
 Ensemble methods
+
 Bagging (or Bootstrapping): new data sets are made with random sampling with replacement, take majority vote
 
 Boosting: similar to bagging, but only use one type of classifier, and trained sequentially.
 Boosting makes new classifiers focus on data that was previously misclassified. 
 
-AdaBoosting: adaptive boosting
-
 Decision stump: simple decision tree.
 
-
 Classication Imbalance:
+
 * Precision: TP / (True Positive + False Positive)
 * Recall: TP/(TP + FN)
 * ROC Curve
 
 Cost Imbalance:
+
 * AdaBoost: adjust error weight vector D
 * Naive Bayes: predict the class with lowest expected cost instead of class with highest probability
 * SVMS: use different C parameters in the cost function for different classes
@@ -196,7 +196,7 @@ Find the best feature to split on:	If we can’t split the data, this node beco
 ### K-Means Clustering (Unsupervised Classification)
 
 * Pros: Easy to implement* Cons: Can converge at local minima; slow on very large datasets 
-* Works with: Numeric values
+* Works with: Numeric
 
 Pseudo-code:
 
@@ -259,6 +259,7 @@ Uses idea of Apriori tree, but faster.
 
 
 Two steps:
+
 * Build FP-tree
 * Mine frequent itemsets from the FP-tree
 
@@ -296,9 +297,10 @@ Remove the meanCompute the covariance matrixFind the eigenvalues and eigenvect
 
 
 ### Big Data and MapReduce(Hadoop)
+
 * Pros: Processes a massive job in a short period of time.* Cons: Algorithms must be rewritten; requires understanding of systems engineering. * Works with: Numeric values, nominal values.
 
-UNIX alternative of MapReduce
+UNIX alternative of MapReduce:
 
 `cat inputFile.txt | python mapper.py | sort | python reducer.py > outputFile.txt`
 

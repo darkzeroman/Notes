@@ -274,6 +274,7 @@ SQL, Intepreter has a computation overhead.
 Examples: Ruby, regular expressions, Runt (library provides simple language for expressing things lie date/time ranges/schedules)
  
 Conclusion
+
 Good for solving well-bounded problems such as query or configuration languages. Is a good option for combining chunks of existing functionality together.
 Core of Interpreter Pattern is AST. Which can be slow but powerful. Similar to DSL
 
