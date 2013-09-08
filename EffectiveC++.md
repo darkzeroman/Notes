@@ -164,3 +164,19 @@ Item 53: Pay attention to compiler warnings.
 Item 54: Familiarize yourself with the standard library, including TR1.
 
 Item 55: Familiarize yourself with Boost.
+
+
+---
+
+# My Own C++ Notes
+
+types of casting: static, const, reinterpret, dynamic
+
+const safe
+
+Explicit interface -> Dynamic (runtime), Polymorphic (same type-> diff behavior)   
+Implicit interface -> static polymorphism (compile time) (different types -> same behavior)
+
+
+When constr. only has 1 parameter, it can be used for type conversion. the explicit inter
+
