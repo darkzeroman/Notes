@@ -11,8 +11,8 @@ Speech:
 * Talk about positive things
 * Ask for feedback
 
-##### UCTWVN
-Understand, Clarify, Test Cases, Write it, Validate, Null
+##### UCTWV (Vidhur's Method)
+Understand, Clarify, Test Cases, Write it, Validate
 
 
 ##### Problem Solving

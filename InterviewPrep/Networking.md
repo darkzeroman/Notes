@@ -63,9 +63,8 @@ Get, Post, Put, Delete
 
 ###UDP/TCP
 
-TCP: connection-oriented service (TCP has client/server exchange transport layer control information before application-level messages begin to flow, aka handshaking), reliable data transfer service. Occurs between sockets of two processes. Full duplex. Can be made secure, as in SSL., error correction, flow control. TCP handshake: SYN, SYN/ACK, ACK
-
-UDP: connectionless (no handshaking), unreliable, no congestion-control mechanism, good for multimedia/real time, no error/flow control.
+* TCP: connection-oriented service (TCP has client/server exchange transport layer control information before application-level messages begin to flow, aka handshaking), reliable data transfer service. Occurs between sockets of two processes. Full duplex. Can be made secure, as in SSL., error correction, flow control. TCP handshake: SYN, SYN/ACK, ACK
+* UDP: connectionless (no handshaking), unreliable, no congestion-control mechanism, good for multimedia/real time, no error/flow control.
 
 #####Use Cases:
 * TCP
