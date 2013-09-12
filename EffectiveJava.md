@@ -1,4 +1,5 @@
 #Effective Java Summary
+```
 1. Static factory methods vs. constructors.
     * customized meaningful names compared to constructors (BigInteger.probablePrime)
     * Able to return any subtype (getPlanner might give BFS/DFS/etc, Collections)
@@ -161,7 +162,7 @@ When overriding is recommended:
 57. Proper use of Exceptions
 58. Checked vs. runtime exceptions
 59. Proper use of checked exceptions
-
+```
 
 Benefits of standard exceptions
 Exceptions and abstraction
