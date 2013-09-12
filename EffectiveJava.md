@@ -102,8 +102,6 @@ When overriding is recommended:
 	* Use generics when using Collections for safety and expressiveness
 	* List vs List<Object>
 		* Can pass a List<String> as a List but not List<Object>
-		
-
 24. Eliminate unchecked warnings
 25. Prefer lists to arrays
 26. Favor generic types
