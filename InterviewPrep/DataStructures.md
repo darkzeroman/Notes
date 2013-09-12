@@ -2,7 +2,7 @@
 
 * Trees - has nodes with 0,1,or many references to other nodes.
 * Terms: Parent, child, descendant, ancestor, leaves
-* Lookup O(logn) because 2^x = n. only if search is nearly halved on each iteration. if everything only has one child, we just have a linked list, which then becomes O(n)
+* Lookup: O(logn) because 2^x = n. Only if search is nearly halved on each iteration. if everything only has one child, we just have a linked list, which then becomes O(n)
 
 #####Traversals  (use recursion)
 

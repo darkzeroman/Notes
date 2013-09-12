@@ -17,8 +17,8 @@ Example: 0001 (1) -> 1110 -> 1111 (-1) . Then adding 1111+0001 = 0000
 
 | (OR), ^ (XOR), & (AND)
 
-Bitwise: & | ; takes two ints and returns an int
-Logical: && || ; takes two booleans and returns a boolean
+* Bitwise: & | ; takes two ints and returns an int
+* Logical: && || ; takes two booleans and returns a boolean
 x>>y or x<<y shifts x y times
 
 ```>>>``` might fill 1 or 0s. in Java ```>>>``` fills zeros.

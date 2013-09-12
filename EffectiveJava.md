@@ -163,7 +163,7 @@ When overriding is recommended:
 58. Checked vs. runtime exceptions
 59. Proper use of checked exceptions
 ```
-
+```
 Benefits of standard exceptions
 Exceptions and abstraction
 Document all thrown exceptions
@@ -179,5 +179,5 @@ Document thread safety
 Avoid thread groups
 They are basically obsolete
 Only useful bit is ThreadGroup.uncaughtException for handling an uncaught exception thrown from one of the threads in the group.
-
+```
 

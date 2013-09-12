@@ -97,7 +97,7 @@ Java: created initially as an interpreter. Uses JVM.
 * Reflection
 * By value
 
-Ruby
+###### Ruby
 
 * OOP, multiple inheritance with mixins
 * dynamic, imperative
