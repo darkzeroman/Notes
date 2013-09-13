@@ -20,8 +20,8 @@
 Examples of CAP
 
 * Relational: consistency and availability
-* NoSQL: partition-tolerance
-* CouchDB: AP
+* NoSQL: partition tolerance
+* CouchDB: availability and partition tolerance
 
 ## SQL vs NoSQL
 
@@ -48,14 +48,14 @@ Referential Integrity
 
 ## DB Normalization
 
-Normal Forms
+###Normal Forms
 
 1. Every column/field contains only one value.
 2. Only have things that are not dependent on the primary key (like course and course title). Issue with Composite keys.
 
 3. All non-keys should not be depended on other non-keys. (Room number and capacity)
 
-Clustered vs non-clustered index
+#### Clustered vs non-clustered index
 
 * Clustered: Refers to how the table is sorted. Usually the primary key. Secondary value is needed if the clustered index is not the primary key.
 * Clustered Index
@@ -68,7 +68,7 @@ Clustered vs non-clustered index
 * Because of the slower insert and update clustered indexes should be set on a field that is normally incremental ie Id or Timestamp.
 
 
-Multithreaded Databases
+## Multithreaded Databases
 
 * pessimistic locking: lock everything that is being accessed
 * optimistic locking: dirty reads that roll back transactions. 

@@ -1,8 +1,8 @@
 ####Definitions for OOP
-* Inheritance: concept that when a class of object is defined, any subclass that is defined can inherit the definitions of one or more general classes.
-* Polymorphism: characteristic of being able to assign a different meaning to a particular symbol or “operator” in different contexts. allows an object to be represented in multiple forms. derived classes have the same function, even though they may not have the same behavior. Determined at run-time (late/dynamic binding)
-* Encapsulation: idea of a class of only letting access of private variables in through methods
-* Abstraction: hide all but relevant data an in order to reduce complexity and increase efficiency. identifying common patterns that have systematic variations
+* **Inheritance**: concept that when a class of object is defined, any subclass that is defined can inherit the definitions of one or more general classes.
+* **Polymorphism**: characteristic of being able to assign a different meaning to a particular symbol or “operator” in different contexts. allows an object to be represented in multiple forms. derived classes have the same function, even though they may not have the same behavior. Determined at run-time (late/dynamic binding)
+* **Encapsulation**: idea of a class of only letting access of private variables in through methods
+* **Abstraction**: hide all but relevant data an in order to reduce complexity and increase efficiency. identifying common patterns that have systematic variations
 
 | Modifier    | Class | Package | Subclass | World |
 |:-----------:|:-----:|:-------:|:--------:|:-----:|

@@ -10,12 +10,12 @@ O(n^2)
 Find smallest element using a linear scan and move it to the front. Then find the second smallest and move it, again doing a linear scan. Continue doing this until all the elements are in place. O(n^2)
 
 
-## O(n log n)
+## O(n + m)
 
 ### Bucket Sort
 Partition the array into a finite number of buckets, and then sort each bucket individually. This gives a time of O(n+m), where n is the number of items and m is the number of distinct items.
 
-## O(n)
+## O(n log n)
 
 ### Merge Sort
 Sort each pair of elements. Then, sort every four elements by merging every two pairs. Then sort every 8 elements, etc. O(n log n) expected and worst case.

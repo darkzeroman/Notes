@@ -1,3 +1,6 @@
+# Random CS Concepts
+## Bits/Bytes
+
 | Type  | Size (bytes) | Values |
 |:-----:|:------------:|:------:|
 |byte   | 1            | -128 to 127 |
@@ -9,10 +12,11 @@
 |char   | 2            | unicode, 0 to 65,535 |
 |boolean| 1 bit        | true/false
 
-1 Byte = 8 Bits
+1 Byte = 8 
 
 Two’s Complement:
 make negative by flipping and adding one
+
 Example: 0001 (1) -> 1110 -> 1111 (-1) . Then adding 1111+0001 = 0000
 
 | (OR), ^ (XOR), & (AND)
@@ -34,7 +38,7 @@ Internal variables are the states. Methods are the what define the interaction
 
 32 bit processor means that the 32 bit virtual address space is available to programs. programs running a 32 bit OS will use 32 bits as their fundamental word size. 
 
-Object Reflection
+#### Object Reflection
 
 * Helps in observing/manipulating the runtime behavior of applications.
 * Can help with debugging/testing because of direct access to methods/constructors/fields
@@ -49,15 +53,16 @@ Object Reflection
 |Use cases|Strange input| Intended/unintended use?|
 |Bounds of use| | Safety? Cost? |
 
-Dividing up data
+#### Dividing up data (for distributed systems)
 
 * Order of appearance
 * By hash value. key, has key, mod hash value by # of machines, store data on that machine
 * By actual value. Store similar data on the same machine
 * Arbitrarily. using a lookup table to identify where data is stored. 
 
-online algorithm: input can be processed in a serial fashion.
+#### Algorithm Types:
 
-offline algorithm: the whole data is available
+* online algorithm: input can be processed in a serial fashion.
+* offline algorithm: the whole data is available
 
 nearest neighbors algorithm: NP Hard. Non-deterministic polynomial time

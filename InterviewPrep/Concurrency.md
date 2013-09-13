@@ -1,4 +1,6 @@
-### Summary of Threads vs Process
+# Concurrency
+
+## Summary of Threads vs Process
 1. Threads are easier to create than processes since they don't require a separate address space. Context switching is less expensive with threads.
 2. Multithreading requires careful programming since threads share data structures that should only be modified by one thread at a time.  Unlike threads, processes don't share the same address space.
 3.  Threads are considered lightweight because they use far less resources than processes.
@@ -7,12 +9,12 @@
 
 A process can spawn subprocess which need to communicate using IPC (interprocess communication communication). Architectural construct.
 
-#####Issues with Threads
+##Issues with Threads
 * Race conditions - one thread updates, other doesn’t get the update
 * Deadlock - waiting on a lock
 * Livelock- busy waiting: wasting resources on checking thread should be alive/dead,
 * Overlocking - putting unnecessary code in wait. 
-S* tarvation : not getting access regularly
+* Starvation - not getting access regularly
 
 Ways to deal with issues are: preemption, priority.
 
@@ -28,7 +30,7 @@ Ways to deal with issues are: preemption, priority.
 * Be careful not to put non-thread safe things in the constructor.
 * Lock on static class puts a lock on the class, lock on an object puts it on the object
 
-Java Data Structures
+##Java Data Structures
 
 | Threadsafe | Not Threadsafe |
 |:-:|:-:|

@@ -1,3 +1,6 @@
+The idea is to have this sheet printed out during a phone interview, just to glance over.
+
+
 **Problem Solving Strategies**
 
  - Sorting 
