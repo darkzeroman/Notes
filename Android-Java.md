@@ -19,7 +19,7 @@ local inner classes
 anonymous inner class  
 Enumeration classes require private constructors, ex: override toString()
 
-# Code Style Guidelines
+# Code Style Guidelines ([Original](http://source.android.com/source/code-style.html))
 
 ## Java Language Rules
 
