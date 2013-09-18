@@ -2,11 +2,11 @@
 
 ## Basic Definitions
 
-* list : ordered list of objects, may be duplicated, random access
-* queue: ordered, no random access
-* set: not ordered, no duplicates
-* map: making a relationship between key and value
-* deque: supports insertion/removal at both ends
+* List : ordered list of objects, may be duplicated, random access
+* Queue: ordered, no random access
+* Set: not ordered, no duplicates
+* Map: making a relationship between key and value
+* Deque: supports insertion/removal at both ends
 
 ## Collection Interfaces
 ### `java.util.Collection`
@@ -49,7 +49,7 @@ Generally the classes that implement the collection interfces typically have nam
 
 | Interface | Hash Table | Resizable Array | Balanced Tree | Linked List | Hash Table + Linked List|
 |--|--|--|--|--|--|
-| Set | HashSet|
+| Set | HashSet| | TreeSet | | LinkedHashSet
 |List | | ArrayList | | LinkedList|
 |Deque| | ArrayDeque | | LinkedList |
 |Map| HashMap | | TreeMap | | LinkedHashMap
