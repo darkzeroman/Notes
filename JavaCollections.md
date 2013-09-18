@@ -1,5 +1,13 @@
 # Java Collections Framework
 
+## Basic Definitions
+
+* list : ordered list of objects, may be duplicated, random access
+* queue: ordered, no random access
+* set: not ordered, no duplicates
+* map: making a relationship between key and value
+* deque: supports insertion/removal at both ends
+
 ## Collection Interfaces
 ### `java.util.Collection`
 
