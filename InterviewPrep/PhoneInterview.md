@@ -21,13 +21,19 @@ The idea is to have this sheet printed out during a phone interview, just to gla
 
 **Sample Style for a Java Class**
 
-        package test;
-        import test.*;
-        public class ClassTest {
-          public static void main(String[] args) {
-    		    ClassTest test = new ClassTest ();
-    	    }
-    	    public static void ClassTest() {
-    		    System.out.println(“test”);
-    	    }
-        }
+``` java
+package test;
+import test.*;
+public class ClassTest {
+  public static void main(String[] args) {
+	    ClassTest test = new ClassTest ();
+    }
+    public ClassTest() {
+	    System.out.println(“test”);
+    }
+    public void instanceMethod(int argument){
+    }
+    public static void classMethod(boolean argument){
+    }
+}
+```
