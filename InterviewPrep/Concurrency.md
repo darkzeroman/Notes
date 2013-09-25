@@ -36,9 +36,7 @@ Busy-wait synchronization: thread runs a loop in which it keeps re-evaluating so
 
 ``` java
 while (!condition) {
-    
 }
-
 // code here which needs to be done after the condition is true
 ```
 

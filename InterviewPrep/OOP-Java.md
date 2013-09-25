@@ -1,4 +1,4 @@
-####Definitions for OOP
+#### Definitions for OOP
 * **Inheritance**: concept that when a class of object is defined, any subclass that is defined can inherit the definitions of one or more general classes.
 * **Polymorphism**: characteristic of being able to assign a different meaning to a particular symbol or “operator” in different contexts. allows an object to be represented in multiple forms. derived classes have the same function, even though they may not have the same behavior. Determined at run-time (late/dynamic binding)
 * **Encapsulation**: idea of a class of only letting access of private variables in through methods
@@ -13,7 +13,7 @@
 
 Nested class has access to all private members.
 
-####Random Java Notes
+#### Random Java Notes
 * Java sticks in a super during the construction call. Default is one with no arguments.
 * Final: can’t be overwritten by subclasses. Class can’t be subclassed. Vars can’t change. 
 * Constructors should generally have only final method calls
@@ -34,14 +34,14 @@ Nested class has access to all private members.
 
 
 #### Abstract vs Interface
-######Abstract
+###### Abstract
 * can have fields that are not static and final, implemented methods. 
 * if abstract class only has abstract method declarations, it should be used as an interface instead.
 * cannot be instantiated, but can be subclassed. 
 * 'extends'
 * Abstract class is used across similar classes that have a lot in common, but slight differences. Example: drawing circles, rectangles, lines, etc. Many of these have similarities but slight variations.
 
-######Interface
+###### Interface
 * Interfaces can be used across a wide variety of different objects to define an "API." 
 * Interface is a reference type, similar to class, that can contain only constants, method signatures, and nested types, static variables or class variables. No method bodies. Cannot be instantiated, only implemented by classes or extended by other interfaces.
 * Interface declaration contains signatures, but no implementations, for a set of methods and might also contain constant definitions

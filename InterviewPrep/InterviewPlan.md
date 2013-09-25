@@ -1,18 +1,21 @@
 ##### Interview Tips
 
-Write code in classes  
-Write test cases  
-Don't dive right in.  
-Communicate.  
-Speech:
-
-* Talk slow
-* Eye contact
-* Talk about positive things
-* Ask for feedback
+* Write code in classes  
+* Write test cases  
+* Don't dive right in, think about the problem
+* Communicate
+* Speech:
+	* Talk slow
+	* Eye contact
+	* Talk about positive things
+	* Ask for feedback
 
 ##### UCTWV (Vidhur's Method)
-Understand, Clarify, Test Cases, Write it, Validate
+* **U**nderstand the problem.
+* **C**larify anything confusing, ask about boundary cases.
+* **T**est Cases should be written before writing the actual code.
+* **W**rite the code.
+* **V**alidate the code with the test cases.
 
 
 ##### Problem Solving
