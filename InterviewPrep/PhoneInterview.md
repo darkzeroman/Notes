@@ -19,6 +19,11 @@ The idea is to have this sheet printed out during a phone interview, just to gla
  - Trees / Binary Tree / Trie / Heaps
  - Graphs
 
+**Commonly Used Algorithms**
+
+ - BFS/DFS
+ - Quick Sort, Merge Sort, Bubble Sort
+
 **Sample Style for a Java Class**
 
 ``` java

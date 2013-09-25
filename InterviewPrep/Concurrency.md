@@ -18,6 +18,8 @@ A process can spawn subprocess which need to communicate using IPC (interprocess
 
 Ways to deal with issues are: preemption, priority.
 
+## Details about Using Threads in Java
+
 [Notify vs NotifyAll](http://stackoverflow.com/questions/37026/java-notify-vs-notifyall-all-over-again)
 
 [Wait, Notify, NotifyAll](http://javarevisited.blogspot.com/2011/05/wait-notify-and-notifyall-in-java.html)
@@ -30,12 +32,24 @@ Ways to deal with issues are: preemption, priority.
 * Be careful not to put non-thread safe things in the constructor.
 * Lock on static class puts a lock on the class, lock on an object puts it on the object
 
-##Java Data Structures
+Busy-wait synchronization: thread runs a loop in which it keeps re-evaluating some condition until that condition becomes true. This is generally a bad way to use threads. Example:
+
+``` java
+while (!condition) {
+    
+}
+
+// code here which needs to be done after the condition is true
+```
+
+### Data Structures
+
+Some data structures are natively threadsafe and others aren't.
 
 | Threadsafe | Not Threadsafe |
 |:-:|:-:|
 | Vector, Hashtable, StringBuffer | ArrayList, Hashmap, StringBuilder
 
-Busy-wait synchronization: thread runs a loop in which it keeps re-evaluating some condition until that condition becomes true.
+
 
 
