@@ -1,12 +1,16 @@
-#####Language Comparison
+##### Language Comparison
 
-C: System. Imperative/Procedural.  
-C++: Application, System. Generic, Imperative, OO, Procedural, Functional.  
-Common LISP: General. Functional, Generic, Imperative, OO, Reflective.  
-Haskell: Application. Functional, Generic, Lazy Evaluation.  
-Java: Application, Client/Server-side, General, Web. Generic, Imperative, OO, Reflective.  
-Javascript: Client-side, Web. Functional, Imperative. Prototype-based. Reflective.  
-Ruby: Application, Scripting, Web. Aspect-oriented, Functional, Imperative, OO, Reflective.
+###### General Language Features
+
+
+
+* C: System. Imperative/Procedural.  
+* C++: Application, System. Generic, Imperative, OO, Procedural, Functional.  
+* Common LISP: General. Functional, Generic, Imperative, OO, Reflective.  
+* Haskell: Application. Functional, Generic, Lazy Evaluation.  
+* Java: Application, Client/Server-side, General, Web. Generic, Imperative, OO, Reflective.  
+* Javascript: Client-side, Web. Functional, Imperative. Prototype-based. Reflective.  
+* Ruby: Application, Scripting, Web. Aspect-oriented, Functional, Imperative, OO, Reflective.
 
 |Language| Type Strength| Type Safety| Type Expression | Type Compatibility Among Composites | Type Checking| 
 |:--:|:--:|:--:|:--:|:--:|:--:|
@@ -18,7 +22,7 @@ Ruby: Application, Scripting, Web. Aspect-oriented, Functional, Imperative, OO, 
 |Javascript|weak|both|implicit|duck|dynamic|
 |Ruby|strong|safe|implicit|property-based, duck|dynamic|
 
-* Strong/weak typing: regarding rules what types that can be mixed. (“abc”-3). Said to be strong when it specifies one or more restrictions on how operations involving values of different data types can be intermix.
+* Type strength: Strong/weak: regarding rules what types that can be mixed. (“abc”-3). Said to be strong when it specifies one or more restrictions on how operations involving values of different data types can be intermix.
     * Java, C++: require variables to have defined type, use casts for conversion.
     * Ruby: strongly typed because typing errors (type safety) are prevented at runtime and do little implicit type conversion, but do not use static type checking. Duck typing is used to describe the dynamic typing paradigm.
     * Haskell: purely static type systems, compiler infers a precise type for all values. do not allow implicit type conversions.
@@ -42,60 +46,67 @@ Ruby: Application, Scripting, Web. Aspect-oriented, Functional, Imperative, OO, 
         * Java finds the variables through static scoping, but the error handling is done through dynamic scoping. This allows for the proper try/catch to be found looking through the stack instead of looking through the code.
         * Algol, Ada, C, Pascal are statically scoped.
         * [Scoping Notes](http://www.cs.washington.edu/education/courses/cse341/95au/general/scoping.html)
+   * Static
 
 ##### Declarative vs Imperative
 * Imperative: follow a set of instructions
     * Structured: loop, while loop, if
         * OO: is a form of structured.
         * Procedural: function based coding, but not OO.
-* Declarative
+* Declarative: declare the desired results but not how to do it
 
 
 ###### Examples
+
 * Declarative
-    * Functional:			LISP/Scheme, ML, Haskell
-    * Dataflow :		Id, Val
-    * Logic, Constraint-based:	Prolog, spreadsheets
-    * Template based:		XSLT
+    * Functional: **LISP/Scheme, ML, Haskell**
+    * Dataflow : **Id, Val**
+    * Logic, Constraint-based:	**Prolog, spreadsheets**
+    * Template based: **XSLT**
 * Imperative
-    * von Neumann:			C, Ada, Fortran
-        * Scripting:		Perl, Python, PHP, bash, awk
-    * Object-oriented:		Smalltalk, Eiffel, C++, Java
+    * von Neumann:	**C, Ada, Fortran**
+        * Scripting: **Perl, Python, PHP, bash, awk**
+    * Object-oriented: **Smalltalk, Eiffel, C++, Java**
 
-#####Random Notes
-Declarative: focus is on what the computer is to do. Higher level.   
-Imperative: focus on how to do it.
-
+##### Random Notes
+* Declarative: focus is on what the computer is to do. Higher level.   
+* Imperative: focus on how to do it.
 * Functional: recursive, lambda calculus
 * Dataflow: model computation as the flow of information (tokens) among primitive functional nodes. Inherently parallel.
 * Logic/CB: attempt to find values that satisfy certain specified relationships, using a goal-directed search  through a list of logical rules.
 * von Neumann: are based on statements that influence subsequent computation via the side effect of changing value in memory
 * Script: emphasizes "glueing" together different parts.
-* OO: 
+* OO: making objects to fulfill roles
 
 
 Javascript: Prototype-based scripting, dynamic, weakly typed, first class functions. imperative and functional and OOP. Key design principles are from the Self/Scheme languages. Conforming to ECMAScript implementations.
 
-**Dynamic**: Dynamic typing, object based, runtime evaluation (eval).  
-**Functional**: first class function, nested function and closures  
-**Prototype-based**: prototype-inheritance, functions as object constructors, functions as methods
+* **Dynamic**: Dynamic typing, object based, runtime evaluation (eval).  
+* **Functional**: first class function, nested function and closures  
+* **Prototype-based**: prototype-inheritance, functions as object constructors, functions as methods
 
 Java: concurrent, class-based, OOP, static, strong, safe. Automatic memory management.
 
-C++: Bjarne Stroustrup in 1979. “C with classes”, C++ increment joke. At first, c++ compiler was something that preprocessed to code to C, then used the C compiler.
-
 C: Dennis Ritchie and Ken Thompson at Bell Labs in 1972. No abstractions.
 
+C++: Bjarne Stroustrup in 1979. “C with classes”, C++ increment joke. At first, C++ compiler was something that preprocessed to code to C, then used the C compiler.
+
+
+
 ###### Java vs C++
+
 C++: designed for systems and applications programming. Extends C, so adds OOP, exception handling, scoped resource management, generic programming, and STL.
+
 * Supports procedural, functional, OOP, template metaprogramming
 * Pass by value, pointers, references
 * Operator overloading
 * Multiple inheritance
-* Compile time
+* Compiled language
+
 Java: created initially as an interpreter. Uses JVM. 
+
 * Reflection
-* By value
+* Everything is passed by value
 
 ###### Ruby
 

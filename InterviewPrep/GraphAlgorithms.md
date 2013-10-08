@@ -1,4 +1,4 @@
-This needs a lot of work
+This needs a lot of work.
 
 # Graph Search
 

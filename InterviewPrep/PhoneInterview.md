@@ -1,28 +1,30 @@
-The idea is to have this sheet printed out during a phone interview, just to glance over.
+The idea is to have this sheet printed out during a phone interview, just to glance over for ideas if you're stuck.
 
 
 **Problem Solving Strategies**
 
  - Sorting 
- - Searching/Binary Search
+ - Searching: (Graph or Binary Search)
  - Divide and Conquer 
- - Dynamic Programming, Memoization
- - Greediness
  - Recursion
+ - Dynamic Programming, Memoization
+ - Greedy Agorithms
 
-**Data Structures**
+**Commonly Used Data Structures**
 
- - Arrays
+ - List, Deque, Map, Queue, Set
+ - Array
  - Stack / Queue
  - HashSet / HashMap / Hashtable / Dictionary
- - TreeSet / TreeMap
- - Trees / Binary Tree / Trie / Heaps
- - Graphs
+ - Trees / Binary Trees / Binary Search Trees / Trie / Heaps
+ - Graphs (Nodes and Edges)
 
 **Commonly Used Algorithms**
 
  - BFS/DFS
+ - Binary Search
  - Quick Sort, Merge Sort, Bubble Sort
+ - Topological Sort
 
 **Sample Style for a Java Class**
 
