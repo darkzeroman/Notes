@@ -12,6 +12,7 @@
  - Machine Learning in Action
  - Statistics in Plain English
  - Lecture Notes for Introductory Probability
+ - MapReduce Design Patterns
 
 ### Reading/Read (Haitus)
  - Learn You a Haskell for Great Good!: A Beginner's Guide [[Amazon][1]]

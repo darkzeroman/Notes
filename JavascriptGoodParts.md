@@ -16,7 +16,7 @@ Javascript's functions ar efirst class objects with lexical scoping.
 * `delete` operator removes property of object, not from prototype
 * Falsy: false, null, undefined, 0, '', NaN
 * Propery name can be an empty string
-* `||` for default values
+* use `||` for default values
 * Bojects are passed by reference
 * Prototype is chained  until at object: protype new property is shown in all subclasses
 * Without var, variable is in global namespace
@@ -50,7 +50,7 @@ Function.method("curry", function(){
 ```
 
 ## Memoization: 
-To add
+To Be Completed Soon
 
 ## Inheritance
 
@@ -86,7 +86,8 @@ var constructor = function(spec, my){
 * Function pattern gives better encapsulation/information hiding/access to super methods. 
 * Durable - not using this or that, durable object has collection to functions called capabilites, so cannot be compromised.
 		
-## Review: Building by parts
+## Building by parts
+To Be Completed Soon
 
 ## Array args
 

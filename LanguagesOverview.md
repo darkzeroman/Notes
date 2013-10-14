@@ -20,7 +20,9 @@
 |Haskell|strong|safe|implicit with optional explicit|property-based, nominative| static|
 |Java|string|safe|explicit|name-basd, nominative|static|
 |Javascript|weak|both|implicit|duck|dynamic|
+|Python|strong|safe|implicit|structural|dynamic
 |Ruby|strong|safe|implicit|property-based, duck|dynamic|
+
 
 * Type strength: Strong/weak: regarding rules what types that can be mixed. (“abc”-3). Said to be strong when it specifies one or more restrictions on how operations involving values of different data types can be intermix.
     * Java, C++: require variables to have defined type, use casts for conversion.
