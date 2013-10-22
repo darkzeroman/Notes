@@ -12,18 +12,20 @@ Works on a dataset that can be turned into list of features (indicator of absenc
 
 Like all supervised methods, Bayesian classifier is trained with examples (which hold an item's features and the classification for that item). 
 
-The classifier keeps track of all the features it has seen so far, along with numerical probabilities that the features are associated with a particular classification.
+The classifier keeps track of all the features it has seen so far, along with numerical probabilities that the features are associated with a particular classification. After going through the training set, there are probabilities that a document about a certain category will contain a given word.
 
-Add More
 
 Trained classifier is nothing more than a list of features along with their associated probabilities. So no need to store original data like instance based methods.
 
 ### Classifying
 
+Need to combine the feature probabilities into a single probability for an entire item.
+
 ` Pr(Cat | Doc) = Pr(Doc | Cat) * Pr(Cat)`
+
 ` Pr(Doc | Cat) = Pr(Word1 | Cat) * Pr(Word2 | Cat) * … `
 
-Add More
+The category which has a higher score for Pr(Cat|Doc) is the predicted category.
 
 ### Strengths and Weaknesses
 
@@ -37,7 +39,7 @@ Sometimes combinationes of features are necessary to make better decisions.
 
 ## Decision Tree Classifier
 
-Makes a decision.
+Makes a decision at every branch of the tree until at an endpoint, which is a predicted category.
 
 ### Training
 
@@ -63,7 +65,10 @@ One type of NN is multilayer perceptron network. Each layer is connected by syna
 
 ### Training 
 
-Train with backpropagation is one method.
+The most common method of training a multilayer perceptron network is backpropagation.
+
+When one instance data is fed an example, the synapse weights that lead to the right label are adjusted slightly in proportion to how much each is contributing.
+
 
 ### Strengths and Weaknesses
 
@@ -78,7 +83,6 @@ SVMs take datasets with numerical inputs and try to predict which category they 
 
 SVM finds the line that separates the data most cleanly, and the ones that do are known as support vectors. Classification is just plotting the data point with respect to the support vectors.
 
-
 ### Kernel  Trick
 
 SVMs (like other linear classifiers) use vector dot-products. This is where polynomial transformations can be applied to different axes.
@@ -90,9 +94,6 @@ SVMS are powerful once the parameters are correct and easy to classify new data 
 SVMs are generally good for problems with lots of data, while DTL is good for small data sets. SVMs need retraining when new data is available.
 
 SVMs are black box like NN.
-
-
-
 
 ## k-Nearest Neighbors
 
@@ -146,12 +147,9 @@ A cost function is some sort of function which can be evaluated to get a value. 
 
 ### Simulated Annealing
 
-```
 Simulated annealing, which was inspired by alloy cooling in physics, starts with a random guess at a solution. It tries to improve the solution by determining the cost for a similar solution that’s a small distance away and in a random direction from the solution in question. If the cost is lower, this becomes the new solution. If the cost is higher, it becomes the new solution with a certain probability, depending on the cur- rent temperature. The temperature starts high and decreases slowly so that early on the algorithm is much more likely to accept worse solutions in order to avoid getting stuck in a local minimum.When the temperature has reached 0, the algorithm returns the current solution.
-```
+
 
 ### Genetic Algorithms
 
-```
 Genetic algorithms were inspired by evolutionary theory. A genetic algorithm starts with several random solutions called the population. The strongest members of the population—those with the lowest cost—are chosen and modified either through slight changes (mutation) or through trait combination (crossover or breeding). This creates a new population, known as the next generation, and over successive generations the solutions improve.The process stops when a certain threshold has been reached, when the population has not improved over several generations, or when a maximum number of genera- tions has been reached. The algorithm returns the best solution that has been found in any generation.
-```
